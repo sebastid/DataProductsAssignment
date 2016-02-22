@@ -843,11 +843,11 @@ lambda &lt;- predict(model, data.frame(Home=1, Team=&quot;England&quot;, Opponen
 ## Away Team scoring rate prediction
 mu &lt;- predict(model, data.frame(Home=0, Team=&quot;Ireland&quot;, Opponent=&quot;England&quot;), type=&quot;response&quot;)
 
-## Joint-Distriubtion table of scores estimation
+## Joint-Distribution table of Home scores Vs Away scores  - could also have used mean(rpois(1000,lambda)&gt;rpois(1000,mu)) instead.
 maxScore &lt;- 65
 prob_matrix &lt;- dpois(0:maxScore, lambda) %*% t(dpois(0:maxScore, mu))
 
-## Probability summarisation
+## W/D/L Probability calculation
 WinPr &lt;- sum(prob_matrix[lower.tri(prob_matrix)])
 DrawPr &lt;- sum(diag(prob_matrix))
 LosePr &lt;- sum(prob_matrix[upper.tri(prob_matrix)])
@@ -866,14 +866,20 @@ England to Win=0.73, to Draw=0.06, to Lose=0.21 against Ireland
 <h3>Results and Conclusions</h3>
 <div class="slideContent" >
 <p><small>
-We are now two weeks into the 2016 championship, the <a href="https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/">2016SixNationsRugbyPredApp Shiny Application</a> correctly predicted 4 match outcomes out of 6 played matches but with what seems to be large probability values. We can conclude that the observed estimated probabilities and decimal odd values seem too extreme and should not be trusted (.i.e for value betting). On the other hand, the application is good enough to provide some intuitive insights into the remaining match outcomes to play and relative strength of the Rugby teams (refer to the Offensive/Defensive strength chart ploted in the app prediction result panel).</small></p>
-
-<p><small>To try next:</small></p>
+<small>We are now two weeks into the 2016 championship, the <a href="https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/">2016 Six Nations Rugby Predictive Shiny Application</a> correctly predicted 4 match outcomes out of 6 played matches. My initial conclusions are:  </p>
 
 <ul>
-<li><small>Break down the score variable into tries and penalty covariates (likely to be more like Poisson random variables : E(X) ~ Var(X)).</small></li>
+<li>The estimated probabilities and decimal odd values seem too extreme and should not be trusted entirely (i.e. for value betting). </li>
+<li>On the other hand, the application predictions look good enough to provide some insights for the remaining matches to play and to provide a quick way to compare the relative strengths of the playing Rugby teams (.i.e. Offensive/Defensive strength chart).</small><br/></li>
+</ul>
+
+<p><strong>To try next:</strong></p>
+
+<ul>
+<li><small>Decompose the score variable into tries and penalty covariates (likely to be more like Poisson random variables : E(X) ~ Var(X)).</small></li>
 <li><small>To use more data and cross-validation to minimize overfitting.</small></li>
-<li><small>Try alternative model algorithms (e.g. hierarchical MCMC Bayesian Regression models to use priors).</small></li>
+<li><small>Try alternative model algorithms (e.g. hierarchical MCMC Bayesian Regression models to use priors).</small>
+</small></li>
 </ul>
 
 </div>
