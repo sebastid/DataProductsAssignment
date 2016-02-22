@@ -12,7 +12,7 @@
 }
 </style>
 
-2016 Six Nations Rugby Championship Shiny Predictive Application
+2016 Six Nations Rugby Championship Predictive Shiny Application
 ========================================================
 author: Sébastien Durand
 date: 22/02/2016
@@ -92,7 +92,7 @@ England to Win=0.73, to Draw=0.06, to Lose=0.21 against Ireland
 Results and Conclusions
 ========================================================
 <small>
-We are now two weeks in the 2016 championship, the [2016SixNationsRugbyPredApp Shiny Application](https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/) correctly predicted 4 match outcomes out of 6 played matches but with what seems to be large probability values. We can conclude that the observed estimated probabilities and decimal odd values seem too extreme and should not be trusted (.i.e for value betting). On the other hand, the application is good enough to provide some intuitive insights into the remaining match outcomes to play and relative strength of the Rugby teams (refer to the Offensive/Defensive strength chart).</small>
+We are now two weeks into the 2016 championship, the [2016SixNationsRugbyPredApp Shiny Application](https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/) correctly predicted 4 match outcomes out of 6 played matches but with what seems to be large probability values. We can conclude that the observed estimated probabilities and decimal odd values seem too extreme and should not be trusted (.i.e for value betting). On the other hand, the application is good enough to provide some intuitive insights into the remaining match outcomes to play and relative strength of the Rugby teams (refer to the Offensive/Defensive strength chart ploted in the app prediction result panel).</small>
 
 <small>To try next:</small>
 - <small>Break down the score variable into tries and penalty covariates (likely to be more like Poisson random variables : E(X) ~ Var(X)).</small>
