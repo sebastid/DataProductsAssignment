@@ -547,7 +547,7 @@ body {
 
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: 'Risque', sans-serif;
 }
   
 .reveal h1,
@@ -556,7 +556,7 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  font-family: "News Cycle", Impact, sans-serif;
+  font-family: 'Risque', Impact, sans-serif;
 }
 
 
@@ -773,7 +773,7 @@ hljs.initHighlightingOnLoad();
    
   
 
-<style>.footer {    color: black;    background: #E8E8E8;    position: fixed;    top: 90%;    text-align:center;    width:100%;}.small-code pre code {  font-size: 1em;}</style>
+<style>.section .reveal .state-background {    background: #25679E;}.small-code pre code {  font-size: 1em;}.reveal .state-background {  background: #25679E;} .exclaim .reveal .state-background {  background: #e6f5ff;} .exclaim .reveal h1,.exclaim .reveal h2,.exclaim .reveal h3 {  color: #25679E;}</style>
 
 
 
@@ -791,7 +791,7 @@ hljs.initHighlightingOnLoad();
 </div>
 
 </section>
-<section data-transition="linear" data-transition-speed="default">
+<section data-state="exclaim" data-transition="linear" data-transition-speed="default">
 <h3>Problem definition</h3>
 <div class="slideContent" >
 <p><small>
@@ -806,7 +806,7 @@ Can we predict the match outcomes of the 2016 Championship using a combination o
 </div>
 
 </section>
-<section data-transition="linear" data-transition-speed="default">
+<section data-state="exclaim" data-transition="linear" data-transition-speed="default">
 <h3>Training Data and Predictive Model</h3>
 <div class="slideContent small-code" >
 <p><small>
@@ -832,7 +832,7 @@ For my shiny application, I made the &#39;naive&#39; assumption that the Rugby s
 </div>
 
 </section>
-<section data-transition="linear" data-transition-speed="default">
+<section data-state="exclaim" data-transition="linear" data-transition-speed="default">
 <h3>Example of a Fixture Prediction: </h3>
 <div class="slideContent small-code" >
 <p><small>The code below illustrates how a fixture prediction is performed using the fitted glm model (e.g. &#39;England - Ireland&#39; ):</small></p>
@@ -862,7 +862,7 @@ England to Win=0.73, to Draw=0.06, to Lose=0.21 against Ireland
 </div>
 
 </section>
-<section data-transition="linear" data-transition-speed="default">
+<section data-state="exclaim" data-transition="linear" data-transition-speed="default">
 <h3>Results and Conclusions</h3>
 <div class="slideContent" >
 <p><small>

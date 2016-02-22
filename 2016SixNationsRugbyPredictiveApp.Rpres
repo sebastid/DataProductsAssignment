@@ -1,24 +1,39 @@
 <style>
-.footer {
-    color: black;
-    background: #E8E8E8;
-    position: fixed;
-    top: 90%;
-    text-align:center;
-    width:100%;
+.section .reveal .state-background {
+    background: #25679E;
 }
+
 .small-code pre code {
   font-size: 1em;
 }
+
+.reveal .state-background {
+  background: #25679E;
+} 
+
+.exclaim .reveal .state-background {
+  background: #e6f5ff;
+} 
+
+
+.exclaim .reveal h1,
+.exclaim .reveal h2,
+.exclaim .reveal h3 
+{
+  color: #25679E;
+}
+
 </style>
 
 2016 Six Nations Rugby Championship Predictive Shiny Application
 ========================================================
 author: Sébastien Durand
 date: 22/02/2016
+font-family: 'Risque'
 
 Problem definition
 ========================================================
+type: exclaim
 <small>
 I am a Rugby fan and enjoy applying analytics to various sports.  
 
@@ -31,6 +46,7 @@ Can we predict the match outcomes of the 2016 Championship using a combination o
 
 Training Data and Predictive Model
 ========================================================
+type: exclaim
 class: small-code
 <small>
 For my shiny application, I made the 'naive' assumption that the Rugby scores were Poisson distributed and applied a simple Generalized Linear Model with Poisson-log link function similarly to the one used by  Martin Eastwood(see [Predicting Football Using R](http://pena.lt/y/2014/11/02/predicting-football-using-r/)).
@@ -86,6 +102,7 @@ model <- glm(Score ~ Home + Team + Opponent, data=training, family=poisson(link=
 
 Example of a Fixture Prediction: 
 ========================================================
+type: exclaim
 class: small-code
 <small>The code below illustrates how a fixture prediction is performed using the fitted glm model (e.g. 'England - Ireland' ):</small>
 ``` {r, echo=TRUE}
@@ -111,6 +128,7 @@ cat(sprintf("Lamdba=%.2f, Mu=%.2f\nEngland to Win=%.2f, to Draw=%.2f, to Lose=%.
 
 Results and Conclusions
 ========================================================
+type: exclaim
 <small>
 <small>We are now two weeks into the 2016 championship, the [2016 Six Nations Rugby Predictive Shiny Application](https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/) correctly predicted 4 match outcomes out of 6 played matches. My initial conclusions are:  
 - The estimated probabilities and decimal odd values seem too extreme and should not be trusted entirely (i.e. for value betting). 
