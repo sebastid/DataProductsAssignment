@@ -7,7 +7,7 @@ shinyUI(
                tabPanel("Instructions", 
                         br(),
                         p("This is an application that makes match prediction for the 2016 Six Nations Rugby Championship."),
-                        p("The application uses a Genaralized Linear Model (glm with poisson count and log link function) initially trained using the 2015 championship results shown below:"),
+                        p("The application uses a Generalized Linear Model (glm with poisson count and log link function) initially trained using the 2015 championship results shown below:"),
                         tableOutput("Result2015Table"),
                         #tags$style(HTML("#Result2015Table table{ 
                         #          margin: left;
