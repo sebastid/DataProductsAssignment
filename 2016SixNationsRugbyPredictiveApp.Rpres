@@ -25,7 +25,7 @@ I am a fan of Rugby and enjoy applying analytics to various sports.
 The [2016 six nations rugby championship](https://en.wikipedia.org/wiki/2016_Six_Nations_Championship) has recently started and I wanted to create a predictive application to give some basic insights on match results based on the 2015 championship results.
 
 __The problem to solve:__  
-Can we predict the match outcomes of the 2016 Championship using a combination of the results of the   past 2015 championship and the on-going 2016 championship?
+Can we predict the match outcomes of the 2016 Championship using a combination of the results of the past 2015 championship and the on-going 2016 championship results?
 </small>
 
 
@@ -90,14 +90,14 @@ class: small-code
 <small>The code below illustrates how a fixture prediction is performed using the fitted glm model (e.g. 'England - Ireland' ):</small>
 ``` {r, echo=TRUE}
 ## Home scoring rate prediction
-lambda <<- predict(model, data.frame(Home=1, Team="England", Opponent="Ireland"), type="response")
+lambda <- predict(model, data.frame(Home=1, Team="England", Opponent="Ireland"), type="response")
 
 ## Away Team scoring rate prediction
-mu <<- predict(model, data.frame(Home=0, Team="Ireland", Opponent="England"), type="response")
+mu <- predict(model, data.frame(Home=0, Team="Ireland", Opponent="England"), type="response")
 
 ## Joint-Distriubtion table of scores estimation
 maxScore <- 65
-prob_matrix <<- dpois(0:maxScore, lambda) %*% t(dpois(0:maxScore, mu))
+prob_matrix <- dpois(0:maxScore, lambda) %*% t(dpois(0:maxScore, mu))
 
 ## Probability summarisation
 WinPr <- sum(prob_matrix[lower.tri(prob_matrix)])

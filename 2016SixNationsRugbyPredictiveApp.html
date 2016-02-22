@@ -800,7 +800,7 @@ I am a fan of Rugby and enjoy applying analytics to various sports.  </p>
 <p>The <a href="https://en.wikipedia.org/wiki/2016_Six_Nations_Championship">2016 six nations rugby championship</a> has recently started and I wanted to create a predictive application to give some basic insights on match results based on the 2015 championship results.</p>
 
 <p><strong>The problem to solve:</strong><br/>
-Can we predict the match outcomes of the 2016 Championship using a combination of the results of the   past 2015 championship and the on-going 2016 championship?
+Can we predict the match outcomes of the 2016 Championship using a combination of the results of the past 2015 championship and the on-going 2016 championship results?
 </small></p>
 
 </div>
@@ -838,14 +838,14 @@ For my shiny application, I made the &#39;naive&#39; assumption that the Rugby s
 <p><small>The code below illustrates how a fixture prediction is performed using the fitted glm model (e.g. &#39;England - Ireland&#39; ):</small></p>
 
 <pre><code class="r">## Home scoring rate prediction
-lambda &lt;&lt;- predict(model, data.frame(Home=1, Team=&quot;England&quot;, Opponent=&quot;Ireland&quot;), type=&quot;response&quot;)
+lambda &lt;- predict(model, data.frame(Home=1, Team=&quot;England&quot;, Opponent=&quot;Ireland&quot;), type=&quot;response&quot;)
 
 ## Away Team scoring rate prediction
-mu &lt;&lt;- predict(model, data.frame(Home=0, Team=&quot;Ireland&quot;, Opponent=&quot;England&quot;), type=&quot;response&quot;)
+mu &lt;- predict(model, data.frame(Home=0, Team=&quot;Ireland&quot;, Opponent=&quot;England&quot;), type=&quot;response&quot;)
 
 ## Joint-Distriubtion table of scores estimation
 maxScore &lt;- 65
-prob_matrix &lt;&lt;- dpois(0:maxScore, lambda) %*% t(dpois(0:maxScore, mu))
+prob_matrix &lt;- dpois(0:maxScore, lambda) %*% t(dpois(0:maxScore, mu))
 
 ## Probability summarisation
 WinPr &lt;- sum(prob_matrix[lower.tri(prob_matrix)])
