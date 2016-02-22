@@ -6,4 +6,4 @@ This is the repository that contains the data-products course work:
 The Shiny Application URL is: 
 https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/
 
-The RStudio Presentation URL is: https://sebastid.github.io/DataProductsAssignment/2016SixNationsRugbyPredictiveApp.html
+The RStudio Presentation URL is:   https://sebastid.github.io/DataProductsAssignment/2016SixNationsRugbyPredictiveApp.html
