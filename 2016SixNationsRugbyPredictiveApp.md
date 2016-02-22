@@ -92,7 +92,7 @@ England to Win=0.73, to Draw=0.06, to Lose=0.21 against Ireland
 Results and Conclusions
 ========================================================
 <small>
-We are now two weeks in the 2016 championship, out of 6 played matches the Shiny Application correctly predicted 4 match outcomes but with what seems to be large probability values. We can conclude that the observed estimated probabilities and decimal odd values seem too extreme and should not be trusted (.i.e for value betting). But the application is good enough to provide some intuitive insights into the future match outcomes and relative strength of the Rugby teams (refer to the Offensive/Defensive strength chart).</small>
+We are now two weeks in the 2016 championship, the [2016SixNationsRugbyPredApp Shiny Application](https://sebastid.shinyapps.io/2016SixNationsRugbyPredApp/) correctly predicted 4 match outcomes out of 6 played matches but with what seems to be large probability values. We can conclude that the observed estimated probabilities and decimal odd values seem too extreme and should not be trusted (.i.e for value betting). On the other hand, the application is good enough to provide some intuitive insights into the remaining match outcomes to play and relative strength of the Rugby teams (refer to the Offensive/Defensive strength chart).</small>
 
 <small>To try next:</small>
 - <small>Break down the score variable into tries and penalty covariates (likely to be more like Poisson random variables : E(X) ~ Var(X)).</small>
