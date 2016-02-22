@@ -20,7 +20,7 @@ date: 22/02/2016
 Problem definition
 ========================================================
 <small>
-I am a fan of Rugby and enjoy applying analytics to various sports.  
+I am a Rugby fan and enjoy applying analytics to various sports.  
 
 The [2016 six nations rugby championship](https://en.wikipedia.org/wiki/2016_Six_Nations_Championship) has recently started and I wanted to create a predictive application to give some basic insights on match results based on the 2015 championship results.
 
