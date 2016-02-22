@@ -33,10 +33,10 @@ shinyUI(
                           fixedRow(
                                      br(),
                                      tags$head(
-                                       tags$style(HTML('#remove{color:#900; border: 1px solid #900; font-weight: bold;}'))
+                                       tags$style(HTML('#remove{color:#006bb3; border: 1px solid #006bb3; font-weight: bold;}'))
                                      ),
                                      tags$head(
-                                       tags$style(HTML('#reset{color:#900; border: 1px solid #900; font-weight: bold;}'))
+                                       tags$style(HTML('#reset{color:#006bb3; border: 1px solid #006bb3; font-weight: bold;}'))
                                      ),
                                      actionButton("remove", "Reset all scores to '-'"),
                                      actionButton("reset", "Reset to Week 1 and Week 2 Scores"),
@@ -183,7 +183,7 @@ shinyUI(
                               textOutput("FourthPanelMessageValue"),
                               br(),
                               tags$head(
-                                tags$style(HTML('#PredictButton{color:#900; border: 1px solid #900; font-weight: bold;}'))
+                                tags$style(HTML('#PredictButton{color:#006bb3; border: 1px solid #006bb3; font-weight: bold;}'))
                               ),
                               actionButton("PredictButton", "Update Predictions!"),
                               hr(),
